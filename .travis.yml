@@ -1,0 +1,4 @@
+version: ~> 1.0
+import:
+  - udagram-api/services/users/.travis.yml
+  - udagram-api/services/feed/.travis.yml
