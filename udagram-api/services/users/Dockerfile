@@ -6,6 +6,8 @@ COPY udagram-api/services/users/package.json .
 
 RUN  npm install
 
+COPY udagram-api/services/users/ .
+
 RUN  npm run build
 
 COPY ./udagram-api/services/users/www .

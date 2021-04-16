@@ -6,6 +6,8 @@ COPY udagram-api/services/feed/package.json .
 
 RUN  npm install
 
+COPY udagram-api/services/feed/ .
+
 RUN  npm run build
 
 COPY ./udagram-api/services/feed/www .
