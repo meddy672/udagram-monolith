@@ -1,13 +1,13 @@
 FROM node:11.15.0
 
-WORKDIR /usr/src/app
+WORKDIR /usr/app/src
 
-COPY ./udagram-api/services/feed/package.json .
+RUN npm build
 
-COPY . .
+COPY ./udagram-api/services/feed/www .
 
 RUN  npm install
 
 EXPOSE 8080
 
-CMD ["npm", "run" "dev"]
+CMD ["node", "server.js"]

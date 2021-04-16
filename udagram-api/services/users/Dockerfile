@@ -1,12 +1,10 @@
 FROM node:11.15.0
 
-WORKDIR /usr/src/app
-
-COPY udagram-api/services/users/package.json .
+WORKDIR /usr/app/src
 
 COPY . .
 
-RUN  npm install
+RUN  ["npm install", "npm build"]
 
 EXPOSE 8080
 
