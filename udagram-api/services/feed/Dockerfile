@@ -2,7 +2,7 @@ FROM node:11.15.0
 
 WORKDIR /usr/app/src
 
-RUN npm build
+RUN npm run build
 
 COPY ./udagram-api/services/feed/www .
 
