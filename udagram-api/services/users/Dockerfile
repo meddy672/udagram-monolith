@@ -2,7 +2,7 @@ FROM node:11.15.0
 
 WORKDIR /usr/app/src
 
-COPY udagram-api/services/users/package*.json .
+COPY udagram-api/services/users/package.json .
 
 RUN  npm install
 
