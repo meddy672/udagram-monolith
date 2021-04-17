@@ -7,7 +7,7 @@ services:
 
 before_install:
   - echo "changing into user service directory..."
-  - cd udagram-api/services/user
+  - cd udagram-api/services/users
 
 # Pre-testing installs
 install:
