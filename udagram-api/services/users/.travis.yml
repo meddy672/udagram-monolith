@@ -12,8 +12,8 @@ install:
 # Scripts to be run such as tests
 before_script:
   - echo pwd
-  #- cd ./services/users
-  #- npm run build
+  - cd udagram-api/services/users
+  - npm run build
 
 script:
   - docker --version # print the version for logging
