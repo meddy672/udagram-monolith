@@ -5,19 +5,25 @@ node_js:
 services:
   - docker
 
+before_install:
+  - echo "changing into user service directory..."
+  - cd udagram-api/services/user
+
 # Pre-testing installs
 install:
-  - echo "nothing needs to be installed"
+  - echo "installing dependencies..."
+  - npm install
+  - echo "dependencies installed"
 
 # Scripts to be run such as tests
 before_script:
-  - echo pwd
-  - cd udagram-api/services/users
+  - echo "running build command..."
   - npm run build
+  - echo "build completed"
 
 script:
   - docker --version # print the version for logging
-  - docker build -f udagram-api/services/users/Dockerfile -t meddy672/udagramusers .
+  - docker build -f Dockerfile -t meddy672/udagramusers .
 
 # Tasks to perform after the process is successful. Formatting the Docker username and password as below enables you to programmatically log in without having the password exposed in logs.
 after_success:
