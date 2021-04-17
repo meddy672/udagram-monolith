@@ -11,8 +11,9 @@ install:
 
 # Scripts to be run such as tests
 before_script:
-  - cd ./services/feed
-  - npm run build
+  - echo pwd
+  #- cd ./services/feed
+  #- npm run build
 
 script:
   - docker --version # print the version for logging
