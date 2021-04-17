@@ -2,13 +2,9 @@ FROM node:11.15.0
 
 WORKDIR /usr/app/src
 
-COPY udagram-api/services/feed/package.json .
+COPY udagram-api/services/feed/www/package.json .
 
 RUN  npm install
-
-COPY udagram-api/services/feed/ .
-
-RUN  npm run build
 
 COPY ./udagram-api/services/feed/www .
 
